@@ -19,6 +19,11 @@ catkin_package(
   CATKIN_DEPENDS custom_msgs roscpp rospy std_msgs
 )
 
+include_directories(
+    ${catkin_INCLUDE_DIRS}
+    ${CURSES_INCLUDE_DIR}
+)
+
 # Set node name as variable
 set(node_name "custom_message_node")
 
