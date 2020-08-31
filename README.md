@@ -4,5 +4,7 @@ There are two ROS package in this repository. The first one is the custom msg an
 
 ## CMakeLists of Custom Msg
 
+command: `catkin_create_pkg custom_msgs roscpp rospy message_runtime message_generation`
+
 
 
