@@ -23,11 +23,6 @@ add_message_files(
     CustomMsg.msg
 )
 
-# Generate message
-# generate_messages(
-#   DEPENDENCIES
-# )
-
 catkin_package(
   CATKIN_DEPENDS
     message_runtime
