@@ -65,14 +65,14 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  custom_msgs
+  custom_msgs   # Add
   roscpp
   rospy
   std_msgs
 )
 
 catkin_package(
-  CATKIN_DEPENDS custom_msgs roscpp rospy std_msgs
+  CATKIN_DEPENDS custom_msgs roscpp rospy std_msgs    # Add
 )
 
 include_directories(
@@ -90,5 +90,38 @@ add_executable(${node_name}
 # Link executable with library
 target_link_libraries(${node_name} ${catkin_LIBRARIES})
 # Add msg dependency
-add_dependencies(${node_name} custom_msgs_gencpp)
+add_dependencies(${node_name} custom_msgs_gencpp)   # Add
+```
+
+package.xml
+```xml
+<?xml version="1.0"?>
+<package format="2">
+  <name>custom_package</name>
+  <version>0.0.0</version>
+  <description>The custom_package package</description>
+  <author email="jianle001@e.ntu.edu.sg">brucechanjianle</author>
+  <maintainer email="jianle001@e.ntu.edu.sg">brucechanjianle</maintainer>
+  <license>MIT</license>
+  <url type="website">https://github.com/BruceChanJianLe/ros-custom-msg</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>custom_msgs</build_depend>   # Add
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+
+  <build_export_depend>custom_msgs</build_export_depend>
+  <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>rospy</build_export_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+
+  <exec_depend>custom_msgs</exec_depend>   # Add
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+
+
+</package>
 ```
