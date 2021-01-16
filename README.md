@@ -2,6 +2,18 @@
 
 There are two ROS package in this repository. The first one is the custom msg and the second one is the package which utilizes the custom msg.
 
+## Defining a New Msg
+
+Just an example taken from [people_msgs](https://github.com/wg-perception/people/blob/melodic/people_msgs/msg/Person.msg)
+```
+string              name
+geometry_msgs/Pose  position
+geometry_msgs/Point velocity
+float64             reliability
+string[]            tagnames
+string[]            tags
+```
+
 ## CMakeLists of Custom Msg
 
 command: `catkin_create_pkg custom_msgs roscpp rospy message_runtime message_generation`
