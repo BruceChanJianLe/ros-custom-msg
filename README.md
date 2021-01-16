@@ -4,7 +4,7 @@ There are two ROS package in this repository. The first one is the custom msg an
 
 ## Defining a New Msg
 
-Just an example taken from [people_msgs](https://github.com/wg-perception/people/blob/melodic/people_msgs/msg/Person.msg)
+Just an example taken from [people_msgs](https://github.com/wg-perception/people/blob/melodic/people_msgs/msg/Person.msg).
 ```
 string              name
 geometry_msgs/Pose  position
